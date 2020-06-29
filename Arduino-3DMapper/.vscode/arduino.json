@@ -1,0 +1,5 @@
+{
+    "board": "arduino:sam:arduino_due_x_dbg",
+    "port": "/dev/tty.usbmodem14101",
+    "sketch": "3DMapper.ino"
+}

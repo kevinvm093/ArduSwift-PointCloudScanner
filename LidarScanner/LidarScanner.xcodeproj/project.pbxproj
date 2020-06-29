@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20494C7024A5967000AF5DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C6F24A5967000AF5DE4 /* AppDelegate.swift */; };
+		20494C7224A5967000AF5DE4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C7124A5967000AF5DE4 /* MainViewController.swift */; };
+		20494C7424A5967000AF5DE4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7324A5967000AF5DE4 /* art.scnassets */; };
+		20494C7624A5967500AF5DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7524A5967500AF5DE4 /* Assets.xcassets */; };
+		20494C7924A5967500AF5DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7724A5967500AF5DE4 /* Main.storyboard */; };
+		20494C8324A5974500AF5DE4 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 20494C8224A5974500AF5DE4 /* ORSSerial */; };
+		20494C8624A5990D00AF5DE4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8524A5990D00AF5DE4 /* DataModel.swift */; };
+		20494C8824A5992500AF5DE4 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8724A5992500AF5DE4 /* DataParser.swift */; };
+		20494C8A24A5993F00AF5DE4 /* UARThandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8924A5993F00AF5DE4 /* UARThandler.swift */; };
+		2086EFD824A7EFFB00F17C8C /* MainViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */; };
+		2086EFDA24A7F7FE00F17C8C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086EFD924A7F7FE00F17C8C /* Config.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20494C6C24A5967000AF5DE4 /* LidarScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LidarScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20494C6F24A5967000AF5DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20494C7124A5967000AF5DE4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		20494C7324A5967000AF5DE4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		20494C7524A5967500AF5DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20494C7824A5967500AF5DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20494C7A24A5967500AF5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20494C7B24A5967500AF5DE4 /* LidarScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LidarScanner.entitlements; sourceTree = "<group>"; };
+		20494C8524A5990D00AF5DE4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		20494C8724A5992500AF5DE4 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		20494C8924A5993F00AF5DE4 /* UARThandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UARThandler.swift; sourceTree = "<group>"; };
+		2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExt.swift; sourceTree = "<group>"; };
+		2086EFD924A7F7FE00F17C8C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20494C6924A5967000AF5DE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20494C8324A5974500AF5DE4 /* ORSSerial in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20494C6324A5967000AF5DE4 = {
+			isa = PBXGroup;
+			children = (
+				20494C6E24A5967000AF5DE4 /* LidarScanner */,
+				20494C6D24A5967000AF5DE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20494C6D24A5967000AF5DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20494C6C24A5967000AF5DE4 /* LidarScanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20494C6E24A5967000AF5DE4 /* LidarScanner */ = {
+			isa = PBXGroup;
+			children = (
+				20494C6F24A5967000AF5DE4 /* AppDelegate.swift */,
+				20494C7124A5967000AF5DE4 /* MainViewController.swift */,
+				20494C8424A5989700AF5DE4 /* SerialData */,
+				2086EFD624A7EF8C00F17C8C /* Extensions+Constants */,
+				20494C7324A5967000AF5DE4 /* art.scnassets */,
+				20494C7524A5967500AF5DE4 /* Assets.xcassets */,
+				20494C7724A5967500AF5DE4 /* Main.storyboard */,
+				20494C7A24A5967500AF5DE4 /* Info.plist */,
+				20494C7B24A5967500AF5DE4 /* LidarScanner.entitlements */,
+			);
+			path = LidarScanner;
+			sourceTree = "<group>";
+		};
+		20494C8424A5989700AF5DE4 /* SerialData */ = {
+			isa = PBXGroup;
+			children = (
+				20494C8924A5993F00AF5DE4 /* UARThandler.swift */,
+				20494C8724A5992500AF5DE4 /* DataParser.swift */,
+				20494C8524A5990D00AF5DE4 /* DataModel.swift */,
+			);
+			path = SerialData;
+			sourceTree = "<group>";
+		};
+		2086EFD624A7EF8C00F17C8C /* Extensions+Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2086EFD924A7F7FE00F17C8C /* Config.swift */,
+				2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */,
+			);
+			path = "Extensions+Constants";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20494C6B24A5967000AF5DE4 /* LidarScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20494C7E24A5967500AF5DE4 /* Build configuration list for PBXNativeTarget "LidarScanner" */;
+			buildPhases = (
+				20494C6824A5967000AF5DE4 /* Sources */,
+				20494C6924A5967000AF5DE4 /* Frameworks */,
+				20494C6A24A5967000AF5DE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LidarScanner;
+			packageProductDependencies = (
+				20494C8224A5974500AF5DE4 /* ORSSerial */,
+			);
+			productName = LidarScanner;
+			productReference = 20494C6C24A5967000AF5DE4 /* LidarScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20494C6424A5967000AF5DE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Kevin Vallejo";
+				TargetAttributes = {
+					20494C6B24A5967000AF5DE4 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 20494C6724A5967000AF5DE4 /* Build configuration list for PBXProject "LidarScanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20494C6324A5967000AF5DE4;
+			packageReferences = (
+				20494C8124A5974500AF5DE4 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
+			productRefGroup = 20494C6D24A5967000AF5DE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20494C6B24A5967000AF5DE4 /* LidarScanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20494C6A24A5967000AF5DE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20494C7924A5967500AF5DE4 /* Main.storyboard in Resources */,
+				20494C7624A5967500AF5DE4 /* Assets.xcassets in Resources */,
+				20494C7424A5967000AF5DE4 /* art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20494C6824A5967000AF5DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20494C8824A5992500AF5DE4 /* DataParser.swift in Sources */,
+				20494C7224A5967000AF5DE4 /* MainViewController.swift in Sources */,
+				20494C8A24A5993F00AF5DE4 /* UARThandler.swift in Sources */,
+				2086EFDA24A7F7FE00F17C8C /* Config.swift in Sources */,
+				2086EFD824A7EFFB00F17C8C /* MainViewControllerExt.swift in Sources */,
+				20494C7024A5967000AF5DE4 /* AppDelegate.swift in Sources */,
+				20494C8624A5990D00AF5DE4 /* DataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20494C7724A5967500AF5DE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20494C7824A5967500AF5DE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20494C7C24A5967500AF5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20494C7D24A5967500AF5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		20494C7F24A5967500AF5DE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LidarScanner/LidarScanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 67NGABWL3F;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = LidarScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinvm093.LidarScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		20494C8024A5967500AF5DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LidarScanner/LidarScanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 67NGABWL3F;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = LidarScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kevinvm093.LidarScanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20494C6724A5967000AF5DE4 /* Build configuration list for PBXProject "LidarScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20494C7C24A5967500AF5DE4 /* Debug */,
+				20494C7D24A5967500AF5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20494C7E24A5967500AF5DE4 /* Build configuration list for PBXNativeTarget "LidarScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20494C7F24A5967500AF5DE4 /* Debug */,
+				20494C8024A5967500AF5DE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20494C8124A5974500AF5DE4 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20494C8224A5974500AF5DE4 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20494C8124A5974500AF5DE4 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 20494C6424A5967000AF5DE4 /* Project object */;
+}

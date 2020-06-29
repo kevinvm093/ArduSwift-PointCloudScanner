@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Applications/Arduino.app/Contents/Java/tools/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/**",
+                "/Users/kevinv/Library/Arduino15/packages/arduino/tools/**",
+                "/Users/kevinv/Library/Arduino15/packages/arduino/hardware/sam/1.6.12/**",
+                "/Users/kevinv/Documents/Arduino/libraries/**",
+                "/Users/kevinv/Documents/Code/Projects/3DMapper/**",
+                "/Applications/Arduino.app/Contents/Java/libraries/**"
+            ],
+            "forcedInclude": [
+                "/Users/kevinv/Library/Arduino15/packages/arduino/hardware/sam/1.6.12/cores/arduino/Arduino.h"
+            ],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
