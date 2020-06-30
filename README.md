@@ -1,26 +1,28 @@
 # ArduSwift-PointCloudScanner
+Click on any of the images to watch the ArduSwift-PointCloudScanner in action!
 
 [![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/PointCloudFront.png)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
 [![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/PointCloudTop.png)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
 [![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/LidarScannerGIF.gif)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
 
-###### Components, Supplies , IDE's
+## Components, Supplies , IDE's
 The components attached to the Due & schematic are as follows:
-* XCode         - IDE used to program OSX app.
-* VS Code       - IDE used to program Arduino 
-* Arduino Due   - Controller
-* MPU6050       - Gyroscope (Stepper Motor steering wheel)
-* 28BYJ-48      - Stepper Motor (Device X-Axis)
-* ULN2003       - Driver
-* TFMini Plus   - LiDAR (Distance measurer)
-* 20x4 LCD Screen - (Interface)
+* XCode             - IDE used to program OSX app.
+* VS Code           - IDE used to program Arduino 
+* Arduino Due       - Controller
+* MPU6050           - Gyroscope (Stepper Motor steering wheel)
+* 28BYJ-48          - Stepper Motor (Device X-Axis motor)
+* ULN2003           - Driver
+* TFMini Plus       - LiDAR (Distance measurer)
+* 20x4 LCD Screen   - (Interface)
 * 9V Battery Supply
-* 20Kg Servo Motor - (Device Y-Axis)
+* 20Kg Servo Motor  - (Device Y-Axis motor)
 * Button
-* LED - Status indicator 
+* LED               - Status indicator 
 
 
 ## About this project
+###### Arduino Sketch
 The device operates in 4 phases:
 1. NotReady
 2. Ready
