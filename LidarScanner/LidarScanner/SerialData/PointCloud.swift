@@ -8,14 +8,16 @@
 
 import Foundation
 import Cocoa
+import SceneKit
 
-public class DataParser: NSObject{
+public class PointCloud: NSObject {
     
-    static let shared = DataParser()
+    static let shared = PointCloud()
+    @objc dynamic fileprivate(set) internal var vectors = [SCNVector3]()
     let file = File.shared
-    @objc dynamic fileprivate(set) internal var dataPoints:[DataModel] = [DataModel]()
+
     
-    // MARK: Public functions
+    // MARK: - Public functions
     
     /// Reads coordinates stored in Text file and saves it into the model
     func readFile() {
@@ -28,11 +30,13 @@ public class DataParser: NSObject{
                 
                 let raw = try String(contentsOf: fileURL)
                 let dataArray = raw.split(separator: file.newLineToken)
-                
                 for data in dataArray {
                     
-                    dataPoints.append(DataModel(withData: data.split(separator: file.spaceToken)))
-                }
+                    let d = data.split(separator: file.spaceToken)
+                    vectors.append(SCNVector3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
+               }
+
+                
             } catch { print("error reading file") }
         }
         
@@ -46,12 +50,11 @@ public class DataParser: NSObject{
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first {
             var text = ""
-            let fileURL = dir.appendingPathComponent("pcCoords").appendingPathExtension(file.ext)
+            let fileURL = dir.appendingPathComponent(file.name).appendingPathExtension(file.ext)
             do {
                 
-                for data in dataPoints {
-                    
-                    text.append(contentsOf: "\(data.xPoint) \(data.yPoint) \(data.zPoint) \(data.sphereVector.x) \(data.sphereVector.z) \(data.sphereVector.y)\n")
+                for data in vectors {
+                        text.append(contentsOf: "\(data.x) \(data.z) \(data.y)\n")
                 }
                 
                 try text.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
@@ -67,6 +70,13 @@ public class DataParser: NSObject{
     func parseData(data:Data) {
         
         let dataString = String(decoding: data, as: UTF8.self)
-        dataPoints.append(DataModel(withData: dataString.split(separator: file.spaceToken)))
+        let d = dataString.split(separator: file.spaceToken)
+        vectors.append(SCNVector3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
+    }
+    
+    var colorHSB:NSColor {
+        
+        let h = ((vectors.last?.getAngle())!) / .pi + 0.25
+        return NSColor.init(calibratedHue: h, saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
 }

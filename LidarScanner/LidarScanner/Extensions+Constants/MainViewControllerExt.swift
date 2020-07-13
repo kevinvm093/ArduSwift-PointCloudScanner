@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import SceneKit
 import QuartzCore
 
@@ -17,11 +16,14 @@ extension MainViewController {
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
+        cameraNode.name = "camera"
         cameraNode.camera = SCNCamera()
         self.scene.rootNode.addChildNode(cameraNode)
         
-        cameraNode.position = SCNVector3(x: 0, y: 75, z: 150)
+        cameraNode.position = SCNVector3(x: 0, y: 150, z: 75)
         cameraNode.camera?.zFar = 500.0
+        cameraNode.transform = SCNMatrix4Rotate(cameraNode.worldTransform, -.pi, 0, 0, 1)
+        cameraNode.transform = SCNMatrix4Rotate(cameraNode.worldTransform, .pi/2, 1, 0, 0)
     }
     
     func generateLight() {
@@ -47,7 +49,7 @@ extension MainViewController {
         scnView.scene = scene
         scnView.allowsCameraControl = true
         scnView.showsStatistics = true
-        scnView.backgroundColor = NSColor.black
+        scnView.backgroundColor = NSColor.init(calibratedRed: 27/255, green: 29/255, blue: 31/255, alpha: 1.0)
     }
     
     func addGesture() {

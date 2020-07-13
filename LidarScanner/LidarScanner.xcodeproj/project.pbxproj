@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200B3B0224B1825300074369 /* SCNVector3+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3B0124B1825300074369 /* SCNVector3+Ext.swift */; };
 		20494C7024A5967000AF5DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C6F24A5967000AF5DE4 /* AppDelegate.swift */; };
 		20494C7224A5967000AF5DE4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C7124A5967000AF5DE4 /* MainViewController.swift */; };
 		20494C7424A5967000AF5DE4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7324A5967000AF5DE4 /* art.scnassets */; };
 		20494C7624A5967500AF5DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7524A5967500AF5DE4 /* Assets.xcassets */; };
 		20494C7924A5967500AF5DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20494C7724A5967500AF5DE4 /* Main.storyboard */; };
 		20494C8324A5974500AF5DE4 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 20494C8224A5974500AF5DE4 /* ORSSerial */; };
-		20494C8624A5990D00AF5DE4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8524A5990D00AF5DE4 /* DataModel.swift */; };
-		20494C8824A5992500AF5DE4 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8724A5992500AF5DE4 /* DataParser.swift */; };
+		20494C8824A5992500AF5DE4 /* PointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8724A5992500AF5DE4 /* PointCloud.swift */; };
 		20494C8A24A5993F00AF5DE4 /* UARThandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20494C8924A5993F00AF5DE4 /* UARThandler.swift */; };
 		2086EFD824A7EFFB00F17C8C /* MainViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */; };
 		2086EFDA24A7F7FE00F17C8C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086EFD924A7F7FE00F17C8C /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200B3B0124B1825300074369 /* SCNVector3+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Ext.swift"; sourceTree = "<group>"; };
 		20494C6C24A5967000AF5DE4 /* LidarScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LidarScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20494C6F24A5967000AF5DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20494C7124A5967000AF5DE4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -29,8 +30,7 @@
 		20494C7824A5967500AF5DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20494C7A24A5967500AF5DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20494C7B24A5967500AF5DE4 /* LidarScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LidarScanner.entitlements; sourceTree = "<group>"; };
-		20494C8524A5990D00AF5DE4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		20494C8724A5992500AF5DE4 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		20494C8724A5992500AF5DE4 /* PointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCloud.swift; sourceTree = "<group>"; };
 		20494C8924A5993F00AF5DE4 /* UARThandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UARThandler.swift; sourceTree = "<group>"; };
 		2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExt.swift; sourceTree = "<group>"; };
 		2086EFD924A7F7FE00F17C8C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -84,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				20494C8924A5993F00AF5DE4 /* UARThandler.swift */,
-				20494C8724A5992500AF5DE4 /* DataParser.swift */,
-				20494C8524A5990D00AF5DE4 /* DataModel.swift */,
+				20494C8724A5992500AF5DE4 /* PointCloud.swift */,
 			);
 			path = SerialData;
 			sourceTree = "<group>";
@@ -95,6 +94,7 @@
 			children = (
 				2086EFD924A7F7FE00F17C8C /* Config.swift */,
 				2086EFD724A7EFFB00F17C8C /* MainViewControllerExt.swift */,
+				200B3B0124B1825300074369 /* SCNVector3+Ext.swift */,
 			);
 			path = "Extensions+Constants";
 			sourceTree = "<group>";
@@ -176,13 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20494C8824A5992500AF5DE4 /* DataParser.swift in Sources */,
+				20494C8824A5992500AF5DE4 /* PointCloud.swift in Sources */,
 				20494C7224A5967000AF5DE4 /* MainViewController.swift in Sources */,
 				20494C8A24A5993F00AF5DE4 /* UARThandler.swift in Sources */,
 				2086EFDA24A7F7FE00F17C8C /* Config.swift in Sources */,
 				2086EFD824A7EFFB00F17C8C /* MainViewControllerExt.swift in Sources */,
 				20494C7024A5967000AF5DE4 /* AppDelegate.swift in Sources */,
-				20494C8624A5990D00AF5DE4 /* DataModel.swift in Sources */,
+				200B3B0224B1825300074369 /* SCNVector3+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

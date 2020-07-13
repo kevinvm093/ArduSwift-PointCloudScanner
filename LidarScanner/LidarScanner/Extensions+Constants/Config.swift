@@ -14,7 +14,7 @@ class Plot {
     static let shared = Plot()
     
     var sphereRadius:CGFloat {
-        return 0.25
+        return 0.5
     }
     
     var far:Float {
@@ -29,9 +29,21 @@ class Plot {
         return 25
     }
     
-    var scale:Float {
-        return 1.5
+    var scale:CGFloat {
+        return 0.25
     }
+    
+    var zMax:CGFloat {
+      return 433
+    }
+    
+    var yMax:CGFloat {
+      return 125
+    }
+    
+    var xMax:CGFloat {
+        return 204
+    } 
     
 }
 // MARK: - Constants used when reading from file.

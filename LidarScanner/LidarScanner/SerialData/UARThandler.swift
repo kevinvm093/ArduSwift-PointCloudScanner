@@ -12,7 +12,7 @@ import ORSSerial
 class UARThandler : NSObject, ORSSerialPortDelegate {
     
     let standardInputFileHandle = FileHandle.standardInput
-    let dataParser = DataParser.shared
+    let dataParser = PointCloud.shared
     var serialPort: ORSSerialPort?
 
     override init() {
