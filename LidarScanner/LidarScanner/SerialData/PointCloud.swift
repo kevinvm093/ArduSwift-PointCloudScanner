@@ -12,15 +12,15 @@ import SceneKit
 
 public class PointCloud: NSObject {
     
-    static let shared = PointCloud()
-    var vectors = [simd_float3]()
-    @objc dynamic fileprivate(set) internal var flag = false
     let file = File.shared
+    var vectors = [simd_float3]()
+    static let shared = PointCloud()
+    @objc dynamic fileprivate(set) internal var newDataFlag = false
 
     
     // MARK: - Public functions
     
-    /// Reads coordinates stored in Text file and saves it into the model
+    /// Reads coordinates stored from Text file and saves them into an array of [simd_float3]
     func readFile() {
         
         let now = DispatchTime.now()
@@ -35,10 +35,8 @@ public class PointCloud: NSObject {
                     
                     let d = data.split(separator: file.spaceToken)
                     vectors.append(simd_float3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
-                    flag = false
+                    newDataFlag = true
                }
-
-                
             } catch { print("error reading file") }
         }
         

@@ -15,7 +15,7 @@ class MainViewController: NSViewController {
     let plot = Plot.shared
     let scene = SCNScene()
     let cameraNode = SCNNode()
-    // let uartHandler = UARThandler()
+    let uartHandler = UARThandler()
     let pointCloud = PointCloud.shared
     private var dataObserver: NSKeyValueObservation?
     
@@ -26,10 +26,11 @@ class MainViewController: NSViewController {
         generateCamera()
         configureScene()
         
-        dataObserver = pointCloud.observe(\.flag) { [weak self] (controller, true) in
+        dataObserver = pointCloud.observe(\.newDataFlag) { [weak self] (controller, changed) in
             self?.draw()
         }
         
+        // listens for keyboard input
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
             if self.keyDown(with: $0) {
                 return nil
@@ -53,10 +54,6 @@ class MainViewController: NSViewController {
     }
     
     /// Creates, colors and translates a sphere node that gets added into view. Together every sphere will add up to draw a 3D image.
-    /// - Parameters:
-    ///   - data: none.
-    /// - Returns: nothing.
-    
     func draw() {
         
         let data = pointCloud.vectors.last!
@@ -103,7 +100,7 @@ class MainViewController: NSViewController {
             let rotation = simd_quatf(angle: -(Float.pi/180) , axis: normalize(simd_float3(1,0,0)))
             cameraNode.simdRotate(by: rotation, aroundTarget: simd_float3(0,0, -50))
         }
-        else if (event.keyCode == 126) {
+        else if (event.keyCode == 126) { //up
             
             let rotation = simd_quatf(angle: (Float.pi/180) , axis: normalize(simd_float3(1,0,0)))
             cameraNode.simdRotate(by: rotation, aroundTarget: simd_float3(0,0, -50))

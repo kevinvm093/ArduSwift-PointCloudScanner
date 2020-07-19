@@ -40,59 +40,19 @@ The device takes approximately 204 reading per Y value, where Y is any value bet
 OS X application is relatively simple it simply listens to the serial port for any data coming in that meets the criteria given. 
 
 Expected data format: 
-<xxx yyy zzz xxx.xxxxx yyy.yyyyy zzz.zzzzz>
-Where the integers are the coordinates in cartesian format and the decimal values are in spherical.
+``` 
+<xxx.xxxxx yyy.yyyyy zzz.zzzzz>
+``` 
+Where the data tranmitted are the coordinates in cartesian format. These coordinates are then parsed and saved into an simd_float3 vector and added to an array of [simd_float3]. 
 
-The application will then parse in coming data and save them to an array of DataModel which looks like this: 
-```
-public class DataModel: NSObject {
-    
-    var xPoint:Float
-    var yPoint:Float
-    var zPoint:Float
-    var sphereVector:SCNVector3
-    
-    init(withData:[Substring.SubSequence]) {
-        
-        self.xPoint = Float(withData[0])!
-        self.yPoint = Float(withData[1])!
-        self.zPoint = Float(withData[2])!
-        self.sphereVector = SCNVector3(-Float(withData[3])!,
-                                       -Float(withData[5])!,
-                                       -Float(withData[4])!)
-    }
-```
-An observer is attached to the array DataModel on the main thread, thus the user is able to watch in realtime the 3D image forming on the MainViewController as data begins to come in. Together each vector makes a point on the Point Cloud rendering a 3D image, this was accomplished with help from Swift's SceneKit Framework.
+An observer on the main thread is attached to a flag boolean that is set to true everytime there is new data added into the array of vectors, thus the user is able to watch in realtime the 3D image rendering on the UI as data begins to come in. 
+
+This application uses SceneKit to render every single vector coming, another thing to note is that SIMD is used perform all vector transformations, scales and rotations for speedy performance
 
 ## BreadBoard Schematics
 [![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/breadboard_layout.png)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
 
 ## Future Improvements
-
-###### Device speed
-Currently the flow of my device while scanning is:
-``` 
-1. Begin reading from LiDAR and xmitting data.
-2. Sweep clockwise from starting point to 180 degrees.
-3. Stop reading from LiDAR and xmitting data.
-4. Rotate counter clockwise.
-5. Increment Y axis. 
-6. Repeat steps: 1-5 until Y reaches 180.
-```
-As you can probably imagine this is a very slow approach, a much better one would be:
-``` 
-1. Begin reading from LiDAR and xmitting data.
-2. Sweep clockwise from starting point to 180 degrees.
-3. Increment Y axis. 
-4. Rotate counter clockwise.
-5. Repeat steps: 1-4 until Y reaches 180.
-``` 
-
-By doing so I would cut the time by half. But my results are also distorted appear distorted as such creating a double or "ghost" of me just a few degrees away from me on the X-axis.
-[add image here]
-Any feedback on how to correct this would be much appreciated lol.... I think it might have to do with the sensor, but I'm sure theres a way I can calculate an offset value to I get the nice undistorted image when ran the long way.
-
-I also would like to atempt running my code on a beefier stepper motor with a little more RPM power, I think I would find that to be highly affective.
 
 ###### Device Accuracy
 Although its able to produce a relatively "decent" image, ive noticed that some of the readings come out noisy from the TFMini Plus LiDAR... This could be because of how cheap the sensor is, but I'd like to eventually be able to filter out the noisy data so I can have a clean image without having to spend on another LiDAR nor lower the rate in which it takes measurements (apparently the slower it reads the more accurate it is). As of now its rate of measurement is 100 readings per second which is its "standard" speed, but it can go up to 1000Hz if need be.
