@@ -13,7 +13,8 @@ import SceneKit
 public class PointCloud: NSObject {
     
     static let shared = PointCloud()
-    @objc dynamic fileprivate(set) internal var vectors = [SCNVector3]()
+    var vectors = [simd_float3]()
+    @objc dynamic fileprivate(set) internal var flag = false
     let file = File.shared
 
     
@@ -33,7 +34,8 @@ public class PointCloud: NSObject {
                 for data in dataArray {
                     
                     let d = data.split(separator: file.spaceToken)
-                    vectors.append(SCNVector3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
+                    vectors.append(simd_float3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
+                    flag = false
                }
 
                 
@@ -71,11 +73,11 @@ public class PointCloud: NSObject {
         
         let dataString = String(decoding: data, as: UTF8.self)
         let d = dataString.split(separator: file.spaceToken)
-        vectors.append(SCNVector3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
+        vectors.append(simd_float3(Float(d[0])!, Float(d[1])!, Float(d[2])!))
     }
     
     var colorHSB:NSColor {
-        
+
         let h = ((vectors.last?.getAngle())!) / .pi + 0.25
         return NSColor.init(calibratedHue: h, saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }

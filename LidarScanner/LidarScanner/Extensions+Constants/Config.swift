@@ -16,35 +16,6 @@ class Plot {
     var sphereRadius:CGFloat {
         return 0.5
     }
-    
-    var far:Float {
-        return 80
-    }
-    
-    var veryFar:Float {
-        return 200
-    }
-    
-    var near: Float {
-        return 25
-    }
-    
-    var scale:CGFloat {
-        return 0.25
-    }
-    
-    var zMax:CGFloat {
-      return 433
-    }
-    
-    var yMax:CGFloat {
-      return 125
-    }
-    
-    var xMax:CGFloat {
-        return 204
-    } 
-    
 }
 // MARK: - Constants used when reading from file.
 class File {
@@ -52,7 +23,7 @@ class File {
     static let shared = File()
     
     var name:String {
-        return "dummyData"
+        return "idk"
     }
     
     var ext:String {

@@ -12,7 +12,7 @@ import ORSSerial
 class UARThandler : NSObject, ORSSerialPortDelegate {
     
     let standardInputFileHandle = FileHandle.standardInput
-    let dataParser = PointCloud.shared
+    let pointCloud = PointCloud.shared
     var serialPort: ORSSerialPort?
 
     override init() {
@@ -37,14 +37,14 @@ class UARThandler : NSObject, ORSSerialPortDelegate {
         
         print("Serial port \(serialPort) was opened!")
         let descriptor = ORSSerialPacketDescriptor(prefixString: "<", suffixString: ">",
-                                                   maximumPacketLength: 46, userInfo: nil)
+                                                   maximumPacketLength: 34, userInfo: nil)
         self.serialPort?.startListeningForPackets(matching: descriptor)
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didReceivePacket packetData: Data,
                     matching descriptor: ORSSerialPacketDescriptor) {
         
-        dataParser.parseData(data: packetData.dropFirst().dropLast())
+        pointCloud.parseData(data: packetData.dropFirst().dropLast())
     }
  
     func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
