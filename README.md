@@ -1,9 +1,7 @@
 # ArduSwift-PointCloudScanner
-Click on any of the images to watch the ArduSwift-PointCloudScanner in action!
 
-[![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/PointCloudFront.png)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
-[![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/PointCloudTop.png)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
-[![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/LidarScannerGIF.gif)](https://youtu.be/2XRfZTwrRYM "Click here to watch video!")
+[![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/PointCloudFront.png)](https://youtu.be/yQfqq1JOyl0"Click here to watch video!")
+[![ ](https://github.com/kevinvm093/ArduSwift-PointCloudScanner/blob/master/docs/LidarScannerGIF.gif)](https://youtu.be/yQfqq1JOyl0"Click here to watch video!")
 
 ## Components, Supplies , IDE's
 The components attached to the Due & schematic are as follows:
